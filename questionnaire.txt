@@ -18,9 +18,9 @@ colleauges, friends and family members who are not involved in my day to day lif
 
 5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
 
-    HTTP - HyperText Transfer Protocol is a web service protocol which can fetch resources and subdocuments from external servers, and then reconstruct them as a complete document for the client.
-    REST - Representational State Transfer is a software architechtural style which guides the design and development of the World Wide Web Architechture, emphasizes scalability, uniform interfaces, independent deployment of components and a layered architechture to facilitate caching.
-    API - Application Programming Interface is a connection between computers or programs, interface which offers a service to other pieces of software, i.e: connects softwares together.
+HTTP - HyperText Transfer Protocol is a web service protocol which can fetch resources and subdocuments from external servers, and then reconstruct them as a complete document for the client.
+REST - Representational State Transfer is a software architechtural style which guides the design and development of the World Wide Web Architechture, emphasizes scalability, uniform interfaces, independent deployment of components and a layered architechture to facilitate caching.
+API - Application Programming Interface is a connection between computers or programs, interface which offers a service to other pieces of software, i.e: connects softwares together.
 
 6. Do you play a musical instrument or sing? If so, how much experience do you have?
 My main instrument is percussion (all classical percussion as well as many different hand drums), which I have played for 12 years.  I have also played piano for ~10 years, as well as Trombone/Tuba for 3 years.
