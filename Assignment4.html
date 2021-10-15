@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+  <meta charset="utf-8">
+  <title>Assignment 4</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      div.header{
+        text-align: center;
+        background-color: lightsteelblue;
+        width: 1200px;
+        padding: 10px;
+        margin-left: 50px;
+        border: 10px solid darkslateblue;
+        border-bottom: 10px groove darkslateblue;
+    }
+  </style>
+  <body>
+<div class = header>
+    <h1>Audio Compression Methods Comparison</h1></div>
+
+<table>
+<tr style="background-color:rgb(53, 178, 255);">
+    <th>File Name</th>
+    <th>Compression Algorithm</th>
+    <th>Bit Rate</th>
+    <th>Original Size</th>
+    <th>Compressed Size</th>
+    <th>Compression Ratio</th>
+    <th>Link to Original Audio File</th>
+    <th>Link to Compressed Audio File</th>
+    <th>Link to Residual Noise File</th>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>AC3</td>
+    <td>64kbps</td>
+    <td>22.5mB</td>
+    <td>510kB</td>
+    <td>0.0226</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_64kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_64kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>AC3</td>
+    <td>96kbps</td>
+    <td>22.5mB</td>
+    <td>765kB</td>
+    <td>0.0340</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_96kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_96kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>AC3</td>
+    <td>128kbps</td>
+    <td>22.5mB</td>
+    <td>1mB</td>
+    <td>0.0444</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_128kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_128kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>AC3</td>
+    <td>192kbps</td>
+    <td>22.5mB</td>
+    <td>1.5mB</td>
+    <td>0.0666</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_192kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-AC3_192kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>M4a</td>
+    <td>Lowest</td>
+    <td>22.5mB</td>
+    <td>2.3mB</td>
+    <td>0.1022</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4A_Lowest(64).wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4A_Low-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>M4a</td>
+    <td>Low-Mid</td>
+    <td>22.5mB</td>
+    <td>2.1mB</td>
+    <td>0.0933</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4a_LowMid(128).wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4A_LowMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>M4a</td>
+    <td>High-Mid</td>
+    <td>22.5mB</td>
+    <td>2.2mB</td>
+    <td>0.0977</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4a_HighMid(256).wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4A_HighMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>M4a</td>
+    <td>Highest</td>
+    <td>22.5mB</td>
+    <td>2.9mB</td>
+    <td>0.1288</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4a_Highest(500).wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-M4A_High-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>MP3</td>
+    <td>64kbps</td>
+    <td>22.5mB</td>
+    <td>511kB</td>
+    <td>0.0227</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_64kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_64kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>MP3</td>
+    <td>96kbps</td>
+    <td>22.5mB</td>
+    <td>766kB</td>
+    <td>0.034</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_96kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_96kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>MP3</td>
+    <td>128kbps</td>
+    <td>22.5mB</td>
+    <td>1mB</td>
+    <td>0.0444</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_128kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_128kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 198, 255, 0.8);">
+    <td>Congas</td>
+    <td>MP3</td>
+    <td>192kbps</td>
+    <td>22.5mB</td>
+    <td>1.5mB</td>
+    <td>0.0666</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_192kbps.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-MP3_192kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>OGG</td>
+    <td>Lowest</td>
+    <td>22.5mB</td>
+    <td>627kB</td>
+    <td>0.0278</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_Lowest.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_Lowest-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>OGG</td>
+    <td>Low-Mid</td>
+    <td>22.5mB</td>
+    <td>921kB</td>
+    <td>0.0409</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_LowMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_LowMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>OGG</td>
+    <td>High-Mid</td>
+    <td>22.5mB</td>
+    <td>1.7mB</td>
+    <td>0.0755</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_HighMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_HighMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(97, 184, 255, 0.8);">
+    <td>Congas</td>
+    <td>OGG</td>
+    <td>Highest</td>
+    <td>22.5mB</td>
+    <td>3.6mB</td>
+    <td>0.16</td>
+    <td><a href="Assignment 4 Audio/CONGAS-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_Highest.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/CONGAS-OGG_Highest-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>AC3</td>
+    <td>64kbps</td>
+    <td>15.6mB</td>
+    <td>471kB</td>
+    <td>0.0302</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_64.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_64kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>AC3</td>
+    <td>96kbps</td>
+    <td>15.6mB</td>
+    <td>707kB</td>
+    <td>0.0453</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_96.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_96kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>AC3</td>
+    <td>128kbps</td>
+    <td>15.6mB</td>
+    <td>942kB</td>
+    <td>0.0604</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_128.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_128kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>AC3</td>
+    <td>192kbps</td>
+    <td>15.6mB</td>
+    <td>1.4mB</td>
+    <td>0.0897</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_192.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-AC3_192kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>M4a</td>
+    <td>Lowest</td>
+    <td>15.6mB</td>
+    <td>3.4mB</td>
+    <td>0.2179</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_Low.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_Lowest-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>M4a</td>
+    <td>Low-Mid</td>
+    <td>15.6mB</td>
+    <td>3.1mB</td>
+    <td>0.1987</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_LowMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_LowMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>M4a</td>
+    <td>High-Mid</td>
+    <td>15.6mB</td>
+    <td>2.4mB</td>
+    <td>0.1538</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_HighMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_HighMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>M4a</td>
+    <td>Highest</td>
+    <td>15.6mB</td>
+    <td>1.6mB</td>
+    <td>0.1026</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_High.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-M4A_High-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>MP3</td>
+    <td>64kbps</td>
+    <td>15.6mB</td>
+    <td>472kB</td>
+    <td>0.0303</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_64.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_64kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>MP3</td>
+    <td>96kbps</td>
+    <td>15.6mB</td>
+    <td>708kB</td>
+    <td>0.0454</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_96.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_96kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>MP3</td>
+    <td>128kbps</td>
+    <td>15.6mB</td>
+    <td>943kB</td>
+    <td>0.0604</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_128.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_128kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(106, 220, 255, 0.8);">
+    <td>RockRiff</td>
+    <td>MP3</td>
+    <td>192kbps</td>
+    <td>15.6mB</td>
+    <td>1.4mB</td>
+    <td>0.0897</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_192.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-MP3_192kbps-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>OGG</td>
+    <td>Lowest</td>
+    <td>15.6mB</td>
+    <td>549kB</td>
+    <td>0.0352</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_Lowest.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_Lowest-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>OGG</td>
+    <td>Low-Mid</td>
+    <td>15.6mB</td>
+    <td>820kB</td>
+    <td>0.0526</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_LowMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_LowMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>OGG</td>
+    <td>High-Mid</td>
+    <td>15.6mB</td>
+    <td>1.4mB</td>
+    <td>0.0897</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_HighMid.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_HighMid-ResidualNoise.wav">Residual Noise</a></td>
+</tr>
+<tr style="background-color:rgba(50, 211, 255, 0.7);">
+    <td>RockRiff</td>
+    <td>OGG</td>
+    <td>Highest</td>
+    <td>15.6mB</td>
+    <td>3mB</td>
+    <td>0.1923</td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OriginalAudio.wav">Original</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_High.wav">Compressed</a></td>
+    <td><a href="Assignment 4 Audio/ROCKRIFF-OGG_Highest-ResidualNoise.wav">Residual Noise</a></td>
+</tr>    
+    </table>
+
+    <h3><a href="index.html">Homepage<strong></a></h3>
+</body>
+      

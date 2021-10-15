@@ -1,0 +1,52 @@
+body{
+    background-color: (253, 250, 200);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: darkslategrey;
+}
+h1{
+    color:royalblue;
+    font-family: Merriweather, serif;
+    font-size: 36px;
+}
+h2,h3{
+    color: blueviolet;
+    font-size: 24px;
+}
+h3{
+    background-color: cyan;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-shadow: 1px 1px 4px silver;
+    display: inline-block;
+}
+ul{
+    text-align: left;
+    padding-inline-start: 10px;
+}
+a:link {
+    color: darkblue;
+    text-decoration: none;
+}
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+a:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+a:active {
+    color: green;
+    text-decoration: underline;
+}
+th{
+    color:slateblue;
+    font-size: 16px;
+}
+table, th, td {
+    border: 2px solid rgb(93, 130, 151);
+    border-radius: 3px;
+}
