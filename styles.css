@@ -1,10 +1,59 @@
 body{
-    background-color: (253, 250, 200);
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     text-align: center;
     color: darkslategrey;
+    background-image: url(Media/LandscapeBkg.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    background-attachment: fixed;
 }
+div.profile{
+    text-align: center;
+    background-color: lightsteelblue;
+    height: 75%;
+    width: 90%;
+    padding: 25px;
+    border: 10px solid darkslateblue;
+    border-bottom: 10px groove darkslateblue;
+    margin: 25px;
+}
+div.about{
+    float: left;
+    background-color: aquamarine;
+    width: 300px;
+    padding: 15px;
+    border: 5px solid darkturquoise;
+    margin: 40px;
+}
+div.classes{
+    float: left;
+    background-color: plum;
+    width: 300px;
+    padding: 15px;
+    border: 5px solid aquamarine;
+    margin: 40px;
+}
+div.classmates{
+    float: right;
+    margin: 40px;
+    background-color: lightgreen;
+    width: 450px;
+    padding: 15px;
+    border: 5px solid skyblue;
+}  
+div.header{
+    background-color: lightsteelblue;
+    padding: 25px;
+    border: 10px solid darkslateblue;
+  }
+div.body{
+    background-color: powderblue;
+    border: 1px double black;
+    margin: 20px;
+    padding: 100px;
+  }
 h1{
     color:royalblue;
     font-family: Merriweather, serif;
