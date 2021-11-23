@@ -16,7 +16,13 @@
         <input type="submit" value="Click to Retrieve Artist's Discography">
     </form>
         
-    <p id="placeholder"></p>
+    <p id="placeholder">
+    <table>
+        <tr>
+            <th>Album</th>
+            <th>Release Date</th>
+        </tr>
+    </p>
     </div>
 </body>
 
@@ -92,27 +98,34 @@
 
     //callback function
     function getReleases(xhttp){
-        let returnedData = xhttp.responseXML; //returns data as XML doc
-        console.log(returnedData);
-
         const releases = [];
+        const dates = [];
+        let placeholder = document.getElementById('placeholder');
         //parse the data from the XML Response and form an array of this data
-        for (let i = 0; i < 500; i++) {
+        
+        for (i = 0; i<500; i++) {
+            let returnedData = xhttp.responseXML; //returns data as XML doc
+            console.log(returnedData);
+
             let artistReleases = returnedData.getElementsByTagName('release')[i];
             console.log(artistReleases);
-
+            //gets release data in XML format
             let albumTitle = artistReleases.getElementsByTagName('title')[i].innerHTML;
-            releases[i] = {album:albumTitle};
+            releases.push(albumTitle);
             console.log(albumTitle);
-        
+            //reads and adds album title from xml
             let releaseDate = artistReleases.getElementsByTagName('date')[i].innerHTML;
-            releases[i] = {date:releaseDate};
+            dates.push(releaseDate);
             console.log(releaseDate);
+            //reads and adds album release date from xml
             
-            //displays the results in the placeholder object
-            let placeholder = document.getElementById('placeholder');
-            placeholder.innerHTML = "<ul>" + releases[i] + "</ul>" + "<br>";
+            //adds new info to array
+            const albums = releases.concat(dates);
+            console.log(albums);
             console.log(i);
+        }
+        for (i = 0; i<500; i++){
+            placeholder.innerHTML = placeholder + releases [i] + "             " + dates [i] + "<br>";
         }
     }
     //activates the artistQuery function
