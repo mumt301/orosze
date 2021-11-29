@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 7 - Theremin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="A7 script + styles/A7_styles.css">
+    <script src="Pizzicato.js" type="text/JavaScript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    <script src="A7 script + styles/A7_script.js" type="text/JavaScript"></script>
+    <script src="A7 script + styles/A7_auxiliary_functions.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+    <h1>An online <span id="thereminLogo">Theremin</span> instrument</h1>
+    <p>The theremin is an electronic musical instrument invented by <a
+            href="https://en.wikipedia.org/wiki/Leon_Theremin">Leon Theremin</a> in the 1920s.</p>
+    <p>This web app uses <a href="https://alemangui.github.io/pizzicato/">pizzicato.js</a> to implement a "virtual"
+        Theremin in to your browser. </p>
+    <p>The <code>pizzicato.js</code> library (and other similar ones) use the <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to play sounds on
+        the browser.</p>
+    <p>The task of <em>Assignment 7</em> was to implement some upgrades for this virtual instrument which could improve its playability.</p>
+   
+
+    <form method="get" id="theform">
+        <fieldset>
+            <legend>Theremin Parameters</legend>
+            <label for="semitone_choice"><b>Please choose an Interval:</b></label>
+                <select name="semitone_choice" id="semitone_choice">
+                    <option value="0">Unison</option>
+                    <option value="3">Minor 3rd</option>
+                    <option value="4">Major 3rd</option>
+                    <option value="5">Perfect 4th</option>
+                    <option value="7">Perfect 5th</option>
+                    <option value="9">Major 6th</option>
+                    <option value="10">Minor 7th</option>
+                    <option value="12">Octave</option>
+                </select>
+            <label for="osc_type"><b>Please choose the type of Oscillator:</b></label>
+                <select name="osc_type" id="osc_type">
+                    <option value="sine">Sine</option>
+                    <option value="square">Square</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="sawtooth">Sawtooth</option>
+                </select>
+
+            <label for="min_freq">Minimum Frequency [100Hz-1000Hz]:</label>
+            <input type="number" id="min_freq" name="min_freq" min="100" max="1000" value="220">
+
+            <label for="max_freq">Maximum Frequency [500Hz-10000Hz]:</label>
+            <input type="number" id="max_freq" name="max_freq" min="500" max="10000" value="880">
+
+            <input type="submit" value="Apply Parameters to Theremin!">
+        </fieldset>
+
+    </form>
+
+    <div id="thereminZone"></div>
+
+    <p id="frequency"></p>
+    <p id="noteName"></p>
+
+    <h3><a href="Assignments.html"><strong>Return to Assignments Page</strong></a></h3>
+    <h3><a href="index.html"><strong>Return to Homepage</strong></a></h3>
+
+</body>
+
+</html>
