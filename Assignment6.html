@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Music Brainz API Call - Assignment 6</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-        <!-- <script src="A5Script.js"></script> -->
+        <script src="A6_script.js"></script>
     </head>
 <body>
     <h1>Music Brainz API Call</h1>
@@ -16,118 +16,12 @@
         <input type="submit" value="Click to Retrieve Artist's Discography">
     </form>
         
-    <p id="placeholder">
-    <table>
-        <tr>
-            <th>Album</th>
-            <th>Release Date</th>
-        </tr>
-    </p>
+    <p id="loading"></p>
+    <p id="artistName"></p>
+    <table id="placeholder"></table>
+    
+    <h3><a href="Assignments.html"><strong>Return to Assignments Page</strong></a></h3>
+    <h3><a href="index.html"><strong>Return to Homepage</strong></a></h3>
+
     </div>
 </body>
-
-
-<script>
-    //main function which calls any other necessary functions
-    function artistQuery() {
-        let params = (new URL(document.location)).searchParams;
-
-        //checks if there has been an artist name submitted
-        if (params.has('artist')){
-            //gets artist from url and stores as new variable
-            let artistName = params.get('artist');
-            console.log(artistName);
-            
-            //create artist query variables
-            let mbBaseURL = "https://musicbrainz.org/ws/2/";
-            let mbArtistQuery = "artist?query=";
-            
-            //create link for Get Request to be sent to MB API
-            let searchURL = mbBaseURL + mbArtistQuery + artistName;
-            console.log(searchURL);
-
-            //call httpGet function, takes API url and artist name to retrieve MBID.
-            httpGet(searchURL, getMBID);
-        }
-    }
-
-    function releasesQuery (artistMBID){
-        //create releases query variables
-        let mbBaseURL = "https://musicbrainz.org/ws/2/";
-        let mbReleasesBrowse = "release?artist=";
-            
-        //create link for browse GET request
-        let browseURL = mbBaseURL + mbReleasesBrowse + artistMBID;
-        console.log(browseURL);
-
-        //call httpGet for releases, takes API url and MBID to retrieve releases and dates.
-        httpGet(browseURL, getReleases);
-    }
-
-    //make the HTTP request call go to MusicBrainz
-    function httpGet(queryURL, cbFunction){
-        //create new object for XMLHttpRequest
-        let xmlHTTP = new XMLHttpRequest();
-
-        xmlHTTP.open("GET", queryURL);
-        xmlHTTP.send();
-
-        //wait for the response to be ready
-        xmlHTTP.onreadystatechange = function (){
-            if(this.readyState == 4 && this.status == 200) {
-                cbFunction(this);
-            }
-        };
-    }
-
-    //callback function
-    function getMBID(xhttp){
-        let returnedData = xhttp.responseXML; //returns data as XML doc
-        console.log(returnedData);
-
-        //parse the data from the XML Response
-        let artistData = returnedData.getElementsByTagName('artist')[0];
-        console.log(artistData);
-        let artistName = artistData.getElementsByTagName('name')[0].innerHTML;
-        console.log(artistName);
-        let artistMBID = artistData.id;
-        console.log(artistMBID);
-
-        releasesQuery (artistMBID);
-    }
-
-    //callback function
-    function getReleases(xhttp){
-        const releases = [];
-        const dates = [];
-        let placeholder = document.getElementById('placeholder');
-        //parse the data from the XML Response and form an array of this data
-        
-        for (i = 0; i<500; i++) {
-            let returnedData = xhttp.responseXML; //returns data as XML doc
-            console.log(returnedData);
-
-            let artistReleases = returnedData.getElementsByTagName('release')[i];
-            console.log(artistReleases);
-            //gets release data in XML format
-            let albumTitle = artistReleases.getElementsByTagName('title')[i].innerHTML;
-            releases.push(albumTitle);
-            console.log(albumTitle);
-            //reads and adds album title from xml
-            let releaseDate = artistReleases.getElementsByTagName('date')[i].innerHTML;
-            dates.push(releaseDate);
-            console.log(releaseDate);
-            //reads and adds album release date from xml
-            
-            //adds new info to array
-            const albums = releases.concat(dates);
-            console.log(albums);
-            console.log(i);
-            
-            placeholder.innerHTML = placeholder + releases [i] + "             " + dates [i] + "<br>";
-        }
-    }
-    //activates the artistQuery function
-    window.onload = artistQuery;
-
-</script>
