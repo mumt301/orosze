@@ -3,12 +3,11 @@ body{
     font-size: 16px;
     text-align: center;
     color: darkslategrey;
-    background-image: url(Media/LandscapeBkg.jpg);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 100%;
     background-attachment: fixed;
-    margin: 10px;
+    margin: 0px;
 }
 .header{
     text-align: center;
