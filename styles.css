@@ -8,88 +8,128 @@ body{
     background-position: top left;
     background-size: 100%;
     background-attachment: fixed;
+    margin: 10px;
 }
-div.profile{
+.header{
     text-align: center;
     background-color: lightsteelblue;
-    height: 75%;
-    width: 90%;
-    padding: 25px;
-    border: 10px solid darkslateblue;
-    border-bottom: 10px groove darkslateblue;
-    margin: 25px;
+    height: auto;
+    width: 100%;
+    border: 15px groove darkslateblue;
+    padding: 20px;
+    margin: 0px;
 }
-div.about{
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 25%;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    height: auto;
+}
+.topnav a:hover {
+    background-color: darkgrey;
+    color: greenyellow;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.topnav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
+.column{
+    border: 10px solid rgba(66, 109, 150, 0.705);
+    background-color: beige;
+    background-color: darkgrey;
     float: left;
+    width: 28%;
+    padding: 15px;
+    margin: 10px;
+}
+.assignmentsColumn{    
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border: 15px groove rgb(75, 197, 201);
+    background-color: rgba(155, 134, 204, 0.822);
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+.container{
+    text-align: center;
+    background-color: lightsteelblue;
+    height: 200px;
+    width: 95%;
+    border: 15px groove rgb(20, 21, 49);
+}
+.about{
+    display: flex;
     background-color: aquamarine;
-    width: 300px;
+    width: 40%;
     padding: 15px;
     border: 5px solid darkturquoise;
-    margin: 40px;
+    margin: 5%;
 }
-div.classes{
-    float: left;
+.classes{
+    display: flex;
     background-color: plum;
-    width: 300px;
+    width: 25%;
     padding: 15px;
     border: 5px solid aquamarine;
-    margin: 40px;
+    margin: 5%;
 }
-div.classmates{
-    float: right;
-    margin: 40px;
+.classmates{
+    display: flex;
     background-color: lightgreen;
-    width: 450px;
+    width: 25%;
     padding: 15px;
     border: 5px solid skyblue;
-}  
-div.header{
-    background-color: lightsteelblue;
-    padding: 25px;
-    border: 10px solid darkslateblue;
-  }
-div.body{
-    background-color: powderblue;
-    border: 1px double black;
-    margin: 20px;
-    padding: 100px;
-  }
+}
+.content-title{
+    text-align: center;
+    position: top;
+    display: block;
+}
+p{
+    font-size: 20px;
+}
 h1{
-    color:royalblue;
+    color:rgb(43, 91, 236);
     font-family: Merriweather, serif;
     font-size: 36px;
 }
 h2,h3{
-    color: blueviolet;
+    color: rgb(82, 33, 128);
     font-size: 24px;
 }
 h3{
+    display: block;
     background-color: cyan;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-shadow: 1px 1px 4px silver;
-    display: inline-block;
 }
 ul{
     text-align: left;
-    padding-inline-start: 10px;
-}
-a:link {
-    color: darkblue;
-    text-decoration: none;
-}
-a:visited {
-    color: darkblue;
-    text-decoration: none;
-}
-a:hover {
-    color: greenyellow;
-    text-decoration: underline;
-}
-a:active {
-    color: green;
-    text-decoration: underline;
 }
 th{
     color:slateblue;
@@ -97,5 +137,16 @@ th{
 }
 table, th, td {
     border: 2px solid rgb(93, 130, 151);
-    border-radius: 3px;
+}
+link:hover{
+    color: paleturquoise;
+    text-shadow: turquoise;
+    font-size: 26px;
+}
+a:hover{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: paleturquoise;
+    text-shadow: turquoise;
+    font-size: 26px;
 }
